@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>bar and line | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		
+		<!-- amCharts plugins -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+		<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css">
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"columnSpacing": 30,
+					"columnWidth": 0.74,
+					"angle": 40,
+					"depth3D": 10,
+					"startDuration": 1,
+					"backgroundAlpha": 0.78,
+					"creditsPosition": "top-right",
+					"handDrawn": true,
+					"pathToImages": "",
+					"export": {
+						"enabled": true
+					},
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"labelPosition": "middle",
+							"labelText": "[[value]]",
+							"lineColor": "#407FCA",
+							"title": "Károlyi",
+							"type": "column",
+							"valueField": "karolyi"
+						},
+						{
+							"balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+							"fillAlphas": 1,
+							"id": "AmGraph-2",
+							"labelPosition": "middle",
+							"labelText": "[[value]]",
+							"lineColor": "#9CDC57",
+							"title": "Országos átlag",
+							"type": "column",
+							"valueField": "oatlag"
+						},
+						{
+							"balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+							"bulletSize": 9,
+							"fillAlphas": 1,
+							"id": "AmGraph-3",
+							"labelPosition": "middle",
+							"labelText": "[[value]]",
+							"lineColor": "#7937AA",
+							"title": "Technikum",
+							"type": "column",
+							"valueField": "szatlag"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"maximum": 1750,
+							"minimum": 1500,
+							"title": "Pont"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"align": "center",
+						"equalWidths": false,
+						"valueWidth": 0
+					},
+					"titles": [
+						{
+							"id": "Cím",
+							"size": 17,
+							"text": "Kompetenciamérés eredménye"
+						},
+						{
+							"id": "év",
+							"size": 13,
+							"text": "2024 tavasz"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "Matematika",
+							"karolyi": "1669",
+							"oatlag": "1623",
+							"szatlag": "1608"
+						},
+						{
+							"category": "Szövegértés",
+							"karolyi": "1640",
+							"oatlag": "1566",
+							"szatlag": "1548"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
